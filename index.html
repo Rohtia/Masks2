@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Masks Character Sheet</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -42,7 +42,6 @@
     </form></div>
   </div>
 
-<!--     <script src="js/form.js"></script> -->
   
 <!--This is the break between files
     jksl
@@ -55,32 +54,48 @@ joifap-->
     <div class="personalInfo">
       <h2>Info</h2>
 
-<!--       Character name: <script>let name= ;
-      // console.log(" " + myChar[0].innerHTML);
-      document.print(myCharName);</script> -->
+
       <p class="myName"></p>
       <p class="myPlay"></p>
     </div> <!--closing personalInfo-->
 
-    <div class="stats">
-      <h2>Stats</h2>
+    <div class="stats-box">
+			<div class="stats">
+      	<h2>Stats</h2>
+			</div>
+
       <div class="eachStat">
         <div class="modifier">
-<!--           <p id="danger"><script>myChar[2].innerHTML;</script> -->
-          <!--<script>yourChar[2].innerhtml;</script>-->
+					<button class="dangerButton mod" id="rollDanger">
         </div>
         Danger
       </div>
+
       <div class="eachStat">
+				<div class="modifier">
+					<button class="freakButton mod" id="rollFreak">
+				</div>
         Freak
       </div>
+
       <div class="eachStat">
+				<div class="modifier">
+					<button class="saviorButton mod" id="rollSavior">
+				</div>
         Savior
       </div>
+
       <div class="eachStat">
+				<div class="modifier">
+					<button class="superiorButton mod" id="rollSuperior">
+				</div>
         Superior
       </div>
+
       <div class="eachStat">
+				<div class="modifier">
+					<button class="mundaneButton mod" id="rollMundane">
+				</div>
         Mundane
       </div>
 
