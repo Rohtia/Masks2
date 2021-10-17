@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+   <h1>Masks character sheet</h1>
+  
+  <div class="infoForm">
+    <form onsubmit="return false;">
+      <p><label for="formName">Name:</label> 
+      <input type="text"
+        name="formName" 
+        id="formName" 
+        placeholder="Your name">
+      </input></p>
+    
+      <p><label for="formPlay">Playbook:</label> 
+      <select name="formPlay" id="formPlay" required>
+        <option value=" "> Your Playbook </option>
+        <option value="The Beacon">The Beacon</option>
+        <option value="The Bull">The Bull</option>
+        <option value="The Delinquent">The Delinquent</option>
+        <option value="The Doomed">The Doomed</option>
+        <option value="The Janus">The Janus</option>
+        <option value="The Legacy">The Legacy</option>
+        <option value="The Nova">The Nova</option>
+        <option value="The Outsider">The Outsider</option>
+        <option value="The Protege">The Protege</option>
+        <option value="The Transformed">The Transformed</option>
+      </select>
+      </p>
+
+      <div class="buttons">
+        <input type="reset" class="button">
+        <button id="createChar" class="createChar"> 
+        <!--formaction="characterSheet.html">-->Create Character</button>
+      </div>
+    </form></div>
+  </div>
+
+<!--     <script src="js/form.js"></script> -->
+  
+<!--This is the break between files
+    jksl
+kidjao
+jihdafop
+jai
+joifap-->
+
+  <div class="flex-container">
+    <div class="personalInfo">
+      <h2>Info</h2>
+
+<!--       Character name: <script>let name= ;
+      // console.log(" " + myChar[0].innerHTML);
+      document.print(myCharName);</script> -->
+      <p class="myName"></p>
+      <p class="myPlay"></p>
+    </div> <!--closing personalInfo-->
+
+    <div class="stats">
+      <h2>Stats</h2>
+      <div class="eachStat">
+        <div class="modifier">
+<!--           <p id="danger"><script>myChar[2].innerHTML;</script> -->
+          <!--<script>yourChar[2].innerhtml;</script>-->
+        </div>
+        Danger
+      </div>
+      <div class="eachStat">
+        Freak
+      </div>
+      <div class="eachStat">
+        Savior
+      </div>
+      <div class="eachStat">
+        Superior
+      </div>
+      <div class="eachStat">
+        Mundane
+      </div>
+
+    </div> <!--closing stats-->
+  </div><!--closing sheet-->
+    <script src="script.js"></script>
+  </body>
+</html>
