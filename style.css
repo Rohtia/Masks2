@@ -85,6 +85,7 @@ h2 {
   color: black;
   margin: 15px;
   width: 40%;
+	font-size: 25px;
 }
 
 .modifier {
@@ -101,4 +102,6 @@ h2 {
 	background-color: #c9a144;
 	align-items: center;
 	padding: 15px;
+	font-size: 50px;
+	font-weight: bolder;
 }
