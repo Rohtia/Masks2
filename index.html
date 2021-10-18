@@ -58,13 +58,27 @@ joifap-->
       <p class="myName"></p>
       <p class="myPlay"></p>
 
-			<div class="rolls">
+			<div class="rolls"> <!-- Display pane for dice rolls-->
 				<p class="diceRolls"></p>
 			</div>
 
 			<div class="clear">
 				<button class="clear button">Clear Rolls</button>
 			</div>
+
+			<div class="potential"> <!-- marking potential/experience -->
+				<label for="potential">Mark your potential: </label><br>
+				<input type="checkbox" id="potential1" name="potential">
+				<input type="checkbox" id="potential2" name="potential">
+				<input type="checkbox" id="potential3" name="potential">
+				<input type="checkbox" id="potential4" name="potential">
+				<input type="checkbox" id="potential5" name="potential"> 
+			</div><!--closing potential-->
+
+			<div class="looks"> <!-- Looks information box -->
+				<p>This is how my character looks:</p>
+				<textarea id="looks" name="looks"></textarea>
+			</div> <!-- closing looks-->
     </div> <!--closing personalInfo-->
 
 
@@ -128,7 +142,7 @@ joifap-->
 				</div>
       </div>
 
-			<div class="eachStat">
+			<div class="eachStat"> <!-- conditions -->
 				<div class="stats">
 					<h2>Conditions</h2>
 				</div>
@@ -145,7 +159,7 @@ joifap-->
 					<input type="checkbox" id="insecure" name="insecure">
 					<label for="insecure">Insecure</label></br>
 				</div>
-			</div>
+			</div> <!-- closing contitions-->
 
     </div> <!--closing stats-->
   </div><!--closing sheet-->

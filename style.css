@@ -66,9 +66,20 @@ h2 {
 .rolls {
 	display: float;
 	border: 1px solid navy;
-	align-items: flex-end;
+	/* align-items: flex-end; */
 	width: 60%;
 	height: 40%;
+}
+
+.looks {
+	width: 100%;
+	font-size: 18px;
+	color: #c9a144;
+}
+
+#looks {
+	width: 95%;
+	height: 100px;
 }
 
 .stats-box {
@@ -129,4 +140,11 @@ h2 {
 .conditions {
 	color: #dabf7f;
 	font-size: 16px;
+}
+
+.potential {
+	width: 100%;
+	font-size: 20px;
+	color: #c9a144;
+	justify-items: auto;
 }

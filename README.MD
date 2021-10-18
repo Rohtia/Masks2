@@ -20,9 +20,9 @@ My plan here is to make an interactive character sheet for the ttrpg Masks, a ga
 
 ## Stage 3.0
 
-  - add Potential (aka experience) counter
-  - add condition markers check boxes
-  - add Look description boxes
+  **DONE** - *add Potential (aka experience) counter*
+  **DONE** - *add condition markers check boxes*
+  **DONE** - *add Look description boxes*
 
 ###  Stage 3.1
   - factor in condition markers to dice rolls
