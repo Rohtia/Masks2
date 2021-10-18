@@ -30,6 +30,12 @@ var incSuperior = document.querySelector('.incSuperior');
 var incMundane = document.querySelector('.incMundane');
 var decMundane = document.querySelector('.decMundane');
 
+var afraid = document.querySelector('.afraid');
+var angry = docuement.querySelector('.angry');
+var guilty = document.querySelector('.guilty');
+var hopeless = document.querySelector('.hopeless');
+var insecure = document.querySelector('.insecure');
+
 var submitInformation = function(){
   store();
 	myName.innerText = `Name: ${name}`;
