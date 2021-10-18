@@ -51,52 +51,81 @@ jai
 joifap-->
 
   <div class="flex-container">
-    <div class="personalInfo">
+    <div class="personalInfo"> <!-- personal info -->
       <h2>Info</h2>
 
 
       <p class="myName"></p>
       <p class="myPlay"></p>
+
+			<div class="rolls">
+				<p class="diceRolls"></p>
+			</div>
+
+			<div class="clear">
+				<button class="clear button">Clear Rolls</button>
+			</div>
     </div> <!--closing personalInfo-->
+
 
     <div class="stats-box">
 			<div class="stats">
       	<h2>Stats</h2>
 			</div>
 
-      <div class="eachStat">
+      <div class="eachStat"> <!-- danger -->
         <div class="modifier">
 					<button class="dangerButton mod" id="rollDanger">0</button>
         </div>
         Danger
+				<div class="adjButtons">
+					<button class="decDanger adj">-1</button>
+					<button class="incDanger adj">+1</button>
+				</div>
       </div>
 
-      <div class="eachStat">
+      <div class="eachStat"> <!-- freak -->
 				<div class="modifier">
 					<button class="freakButton mod" id="rollFreak">0</button>
 				</div>
         Freak
+				<div class="adjButtons">
+					<button class="decFreak adj">-1</button>
+					<button class="incFreak adj">+1</button>
+				</div>
       </div>
 
-      <div class="eachStat">
+      <div class="eachStat"> <!-- savior -->
 				<div class="modifier">
 					<button class="saviorButton mod" id="rollSavior">0</button>
 				</div>
         Savior
+				<div class="adjButtons">
+					<button class="decSavior adj">-1</button>
+					<button class="incSavior adj">+1</button>
+				</div>
       </div>
 
-      <div class="eachStat">
+      <div class="eachStat"> <!-- superior -->
 				<div class="modifier">
 					<button class="superiorButton mod" id="rollSuperior">0</button>
 				</div>
         Superior
+				<div class="adjButtons">
+					<button class="decSuperior adj">-1</button>
+					<button class="incSuperior adj">+1</button>
+				</div>
       </div>
 
-      <div class="eachStat">
+      <div class="eachStat"> <!-- mundane -->
 				<div class="modifier">
 					<button class="mundaneButton mod" id="rollMundane">0</button>
 				</div>
         Mundane
+				<div class="adjButtons">
+					<button class="decMundane adj">-1</button>
+					<button class="incMundane adj">+1</button>
+				</div>
       </div>
 
     </div> <!--closing stats-->

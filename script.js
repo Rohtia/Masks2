@@ -1,6 +1,7 @@
 var textAnswer = document.getElementById("formName");
 var textPlay = document.getElementById("formPlay");
 var submitButton = document.getElementById("createChar");
+var rollDisplay = document.querySelector('.diceRolls');
 var name;
 var play;
 var myName = document.querySelector('.myName');
@@ -11,11 +12,23 @@ var freakButton = document.querySelector('.freakButton');
 var saviorButton = document.querySelector('.saviorButton');
 var superiorButton = document.querySelector('.superiorButton');
 var mundaneButton = document.querySelector('.mundaneButton');
+var clearRolls = document.querySelector('.clear');
 var dangerMod;
 var freakMod;
 var saviorMod;
 var superiorMod;
 var mundaneMod;
+
+var decDanger = document.querySelector('.decDanger');
+var incDanger = document.querySelector('.incDanger');
+var decFreak = document.querySelector('.decFreak');
+var incFreak = document.querySelector('.incFreak');
+var decSavior = document.querySelector('.decSavior');
+var incSavior = document.querySelector('.incSavior');
+var decSuperior = document.querySelector('.decSuperior');
+var incSuperior = document.querySelector('.incSuperior');
+var incMundane = document.querySelector('.incMundane');
+var decMundane = document.querySelector('.decMundane');
 
 var submitInformation = function(){
   store();
@@ -106,4 +119,102 @@ function setStats() {
 	saviorButton.innerText = saviorMod;
 	superiorButton.innerText = superiorMod;
 	mundaneButton.innerText = mundaneMod;
+}
+
+dangerButton.addEventListener('click', function () {
+	console.log("danger rolled");
+	rollCheck(dangerMod, "Danger");
+})
+
+freakButton.addEventListener('click', function() {
+	console.log("freak rolled");
+	rollCheck(freakMod, "Freak");
+})
+
+saviorButton.addEventListener('click', function() {
+	console.log("savior rolled");
+	rollCheck(saviorMod, "Savior");
+})
+
+superiorButton.addEventListener('click', function() {
+	console.log("superior rolled");
+	rollCheck(superiorMod, "Superior");
+})
+
+mundaneButton.addEventListener('click', function() {
+	console.log("mundane rolled");
+	rollCheck(mundaneMod, "Mundane");
+})
+
+function rollCheck(mod, stat) {
+	console.log("rolled");
+	var d1 = Math.floor(Math.random() * 6) + 1;
+	var d2 = Math.floor(Math.random() * 6) + 1;
+	var tot = d1 + d2 + mod;
+	console.log(d1 + " + " + d2);
+	console.log('modifier ' + mod);
+	console.log(tot);
+	var print = stat + ": " + d1 + " + " + d2 + " + " + mod + ` \= ` + tot + `<br />`;
+	rollDisplay.insertAdjacentHTML ('beforeend', print);
+}
+
+clearRolls.addEventListener('click', function() {
+	console.log("clear rolls");
+	rollDisplay.innerText = " ";
+})
+
+decDanger.addEventListener('click', function() {
+	dangerMod = modStat(-1, dangerMod);
+	dangerButton.innerText = dangerMod;
+})
+
+incDanger.addEventListener('click', function() {
+	dangerMod = modStat(1, dangerMod);
+	dangerButton.innerText = dangerMod;
+})
+
+decFreak.addEventListener('click', function() {
+	freakMod = modStat(-1, freakMod);
+	freakButton.innerText = freakMod;
+})
+
+incFreak.addEventListener('click', function() {
+	freakMod = modStat(1, freakMod);
+	freakButton.innerText = freakMod;
+})
+
+decSavior.addEventListener('click', function() {
+	saviorMod = modStat(-1, saviorMod);
+	saviorButton.innerText = saviorMod;
+})
+
+incSavior.addEventListener('click', function() {
+	saviorMod = modStat(1, saviorMod);
+	saviorButton.innerText = saviorMod;
+})
+
+decSuperior.addEventListener('click', function() {
+	superiorMod = modStat(-1, superiorMod);
+	superiorButton.innerText = superiorMod;
+})
+
+incSuperior.addEventListener('click', function() {
+	console.log("inc superior");
+	superiorMod = modStat(1, superiorMod);
+	superiorButton.innerText = superiorMod;
+})
+
+decMundane.addEventListener('click', function() {
+	mundaneMod = modStat(-1, mundaneMod);
+	mundaneButton.innerText = mundaneMod;
+})
+
+incMundane.addEventListener('click', function() {
+	mundaneMod = modStat(1, mundaneMod);
+	mundaneButton.innerText = mundaneMod;
+})
+
+function modStat(adj, stat) {
+	stat += adj;
+	return stat;	
 }
