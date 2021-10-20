@@ -18,7 +18,7 @@ My plan here is to make an interactive character sheet for the ttrpg Masks, a ga
    
    **DONE** - *button to clear the dice roller* 
 
-## Stage 3.0
+## Stage 3.0 DONE
 
   **DONE** - *add Potential (aka experience) counter*
   **DONE** - *add condition markers check boxes*

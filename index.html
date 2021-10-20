@@ -7,162 +7,169 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-   <h1>Masks character sheet</h1>
-  
-  <div class="infoForm">
-    <form onsubmit="return false;">
-      <p><label for="formName">Name:</label> 
-      <input type="text"
-        name="formName" 
-        id="formName" 
-        placeholder="Your name">
-      </input></p>
-    
-      <p><label for="formPlay">Playbook:</label> 
-      <select name="formPlay" id="formPlay" required>
-        <option value=" "> Your Playbook </option>
-        <option value="The Beacon">The Beacon</option>
-        <option value="The Bull">The Bull</option>
-        <option value="The Delinquent">The Delinquent</option>
-        <option value="The Doomed">The Doomed</option>
-        <option value="The Janus">The Janus</option>
-        <option value="The Legacy">The Legacy</option>
-        <option value="The Nova">The Nova</option>
-        <option value="The Outsider">The Outsider</option>
-        <option value="The Protege">The Protege</option>
-        <option value="The Transformed">The Transformed</option>
-      </select>
-      </p>
+		
+		<h1>Masks character sheet and dice roller</h1>
+		
+		<div class="binder">
+			
+			<div class="infoForm" id="infoForm">
+				<form onsubmit="return false;">
+					<p><label for="formName">Name:</label> 
+					<input type="text"
+						name="formName" 
+						id="formName" 
+						placeholder="Your name">
+					</input></p>
+				
+					<p><label for="formPlay">Playbook:</label> 
+					<select name="formPlay" id="formPlay" required>
+						<option value=" "> Your Playbook </option>
+						<option value="The Beacon">The Beacon</option>
+						<option value="The Bull">The Bull</option>
+						<option value="The Delinquent">The Delinquent</option>
+						<option value="The Doomed">The Doomed</option>
+						<option value="The Janus">The Janus</option>
+						<option value="The Legacy">The Legacy</option>
+						<option value="The Nova">The Nova</option>
+						<option value="The Outsider">The Outsider</option>
+						<option value="The Protege">The Protege</option>
+						<option value="The Transformed">The Transformed</option>
+					</select>
+					</p>
 
-      <div class="buttons">
-        <input type="reset" class="button">
-        <button id="createChar" class="createChar"> 
-        <!--formaction="characterSheet.html">-->Create Character</button>
-      </div>
-    </form></div>
-  </div>
-
-  
-<!--This is the break between files
-    jksl
-kidjao
-jihdafop
-jai
-joifap-->
-
-  <div class="flex-container">
-    <div class="personalInfo"> <!-- personal info -->
-      <h2>Info</h2>
-
-
-      <p class="myName"></p>
-      <p class="myPlay"></p>
-
-			<div class="rolls"> <!-- Display pane for dice rolls-->
-				<p class="diceRolls"></p>
+					<div class="buttons">
+						<input type="reset" class="button">
+						<button id="createChar" class="createChar"> 
+						<!--formaction="characterSheet.html">-->Create Character</button>
+					</div>
+				</form></div>
 			</div>
 
-			<div class="clear">
-				<button class="clear button">Clear Rolls</button>
-			</div>
+		
+	<!--This is the break between files
+			jksl
+	kidjao
+	jihdafop
+	jai
+	joifap-->
 
-			<div class="potential"> <!-- marking potential/experience -->
-				<label for="potential">Mark your potential: </label><br>
-				<input type="checkbox" id="potential1" name="potential">
-				<input type="checkbox" id="potential2" name="potential">
-				<input type="checkbox" id="potential3" name="potential">
-				<input type="checkbox" id="potential4" name="potential">
-				<input type="checkbox" id="potential5" name="potential"> 
-			</div><!--closing potential-->
+		
+			<div class="flex-container" id="page1">
+				<div class="personalInfo"> <!-- personal info -->
+					<h2>Info</h2>
 
-			<div class="looks"> <!-- Looks information box -->
-				<p>This is how my character looks:</p>
-				<textarea id="looks" name="looks"></textarea>
-			</div> <!-- closing looks-->
-    </div> <!--closing personalInfo-->
+					<p class="myName"></p>
+					<p class="myPlay"></p>
 
+					<div class="rolls"> <!-- Display pane for dice rolls-->
+						<p class="diceRolls"></p>
+					</div>
 
-    <div class="stats-box">
-			<div class="stats">
-      	<h2>Stats</h2>
-			</div>
+					<div class="clear">
+						<button class="clear button">Clear Rolls</button>
+					</div>
 
-      <div class="eachStat"> <!-- danger -->
-        <div class="modifier">
-					<button class="dangerButton mod" id="rollDanger">0</button>
-        </div>
-        Danger
-				<div class="adjButtons">
-					<button class="decDanger adj">-1</button>
-					<button class="incDanger adj">+1</button>
-				</div>
-      </div>
+					<div class="potential"> <!-- marking potential/experience -->
+						<label for="potential">Mark your potential: </label><br>
+						<input type="checkbox" id="potential1" name="potential">
+						<input type="checkbox" id="potential2" name="potential">
+						<input type="checkbox" id="potential3" name="potential">
+						<input type="checkbox" id="potential4" name="potential">
+						<input type="checkbox" id="potential5" name="potential"> 
+					</div><!--closing potential-->
 
-      <div class="eachStat"> <!-- freak -->
-				<div class="modifier">
-					<button class="freakButton mod" id="rollFreak">0</button>
-				</div>
-        Freak
-				<div class="adjButtons">
-					<button class="decFreak adj">-1</button>
-					<button class="incFreak adj">+1</button>
-				</div>
-      </div>
+					<div class="looks"> <!-- Looks information box -->
+						<!-- <p>This is how my character looks:</p>
+						<textarea id="looks" name="looks"></textarea> -->
+					</div> <!--closing looks-->
+				</div> <!--closing personalInfo-->
 
-      <div class="eachStat"> <!-- savior -->
-				<div class="modifier">
-					<button class="saviorButton mod" id="rollSavior">0</button>
-				</div>
-        Savior
-				<div class="adjButtons">
-					<button class="decSavior adj">-1</button>
-					<button class="incSavior adj">+1</button>
-				</div>
-      </div>
+				<!--tab for character sheet-->
+				<div class="charSheet">
+							
+					<div class="stats-box">
+						<div class="stats">
+							<h2>Stats</h2>
+						</div>
 
-      <div class="eachStat"> <!-- superior -->
-				<div class="modifier">
-					<button class="superiorButton mod" id="rollSuperior">0</button>
-				</div>
-        Superior
-				<div class="adjButtons">
-					<button class="decSuperior adj">-1</button>
-					<button class="incSuperior adj">+1</button>
-				</div>
-      </div>
+						<div class="eachStat"> <!-- danger -->
+							<div class="modifier">
+								<button class="dangerButton mod" id="rollDanger">0</button>
+							</div>
+							Danger
+							<div class="adjButtons">
+								<button class="decDanger adj">-1</button>
+								<button class="incDanger adj">+1</button>
+							</div>
+						</div>
 
-      <div class="eachStat"> <!-- mundane -->
-				<div class="modifier">
-					<button class="mundaneButton mod" id="rollMundane">0</button>
-				</div>
-        Mundane
-				<div class="adjButtons">
-					<button class="decMundane adj">-1</button>
-					<button class="incMundane adj">+1</button>
-				</div>
-      </div>
+						<div class="eachStat"> <!-- freak -->
+							<div class="modifier">
+								<button class="freakButton mod" id="rollFreak">0</button>
+							</div>
+							Freak
+							<div class="adjButtons">
+								<button class="decFreak adj">-1</button>
+								<button class="incFreak adj">+1</button>
+							</div>
+						</div>
 
-			<div class="eachStat"> <!-- conditions -->
-				<div class="stats">
-					<h2>Conditions</h2>
-				</div>
+						<div class="eachStat"> <!-- savior -->
+							<div class="modifier">
+								<button class="saviorButton mod" id="rollSavior">0</button>
+							</div>
+							Savior
+							<div class="adjButtons">
+								<button class="decSavior adj">-1</button>
+								<button class="incSavior adj">+1</button>
+							</div>
+						</div>
 
-				<div class="conditions">
-					<input type="checkbox" id="afraid" name="afraid">
-					<label for="afraid">Afraid</label><br>
-					<input type="checkbox" id="angry" name="angry">
-					<label for="angry">Angry</label></br>
-					<input type="checkbox" id="guilty" name="guilty">
-					<label for="guilty">Guilty</label></br>
-					<input type="checkbox" id="hopeless" name="hopeless">
-					<label for="hopeless">Hopeless</label></br>
-					<input type="checkbox" id="insecure" name="insecure">
-					<label for="insecure">Insecure</label></br>
-				</div>
-			</div> <!-- closing contitions-->
+						<div class="eachStat"> <!-- superior -->
+							<div class="modifier">
+								<button class="superiorButton mod" id="rollSuperior">0</button>
+							</div>
+							Superior
+							<div class="adjButtons">
+								<button class="decSuperior adj">-1</button>
+								<button class="incSuperior adj">+1</button>
+							</div>
+						</div>
 
-    </div> <!--closing stats-->
-  </div><!--closing sheet-->
-    <script src="script.js"></script>
+						<div class="eachStat"> <!-- mundane -->
+							<div class="modifier">
+								<button class="mundaneButton mod" id="rollMundane">0</button>
+							</div>
+							Mundane
+							<div class="adjButtons">
+								<button class="decMundane adj">-1</button>
+								<button class="incMundane adj">+1</button>
+							</div>
+						</div>
+
+						<div class="eachStat"> <!-- conditions -->
+							<div class="stats">
+								<h2>Conditions</h2>
+							</div>
+
+							<div class="conditions">
+								<input type="checkbox" id="afraid" name="afraid">
+								<label for="afraid">Afraid</label><br>
+								<input type="checkbox" id="angry" name="angry">
+								<label for="angry">Angry</label></br>
+								<input type="checkbox" id="guilty" name="guilty">
+								<label for="guilty">Guilty</label></br>
+								<input type="checkbox" id="hopeless" name="hopeless">
+								<label for="hopeless">Hopeless</label></br>
+								<input type="checkbox" id="insecure" name="insecure">
+								<label for="insecure">Insecure</label></br>
+							</div>
+						</div> <!-- closing contitions-->
+
+					</div> <!--closing stats-->
+				</div> <!--closing character sheet-->
+			</div><!--closing sheet-->
+		</div> <!-- closing binder-->
+  <script src="script.js"></script>
   </body>
 </html>

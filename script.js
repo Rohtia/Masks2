@@ -2,6 +2,8 @@ var textAnswer = document.getElementById("formName");
 var textPlay = document.getElementById("formPlay");
 var submitButton = document.getElementById("createChar");
 var rollDisplay = document.querySelector('.diceRolls');
+const form = document.getElementById("infoForm");
+const page1 = document.getElementById('page1');
 var name;
 var play;
 var myName = document.querySelector('.myName');
@@ -35,9 +37,12 @@ var angry = document.querySelector('.angry');
 var guilty = document.querySelector('.guilty');
 var hopeless = document.querySelector('.hopeless');
 var insecure = document.querySelector('.insecure');
+var id;
 
 var submitInformation = function(){
-  store();
+	hide();
+	toggle_visibility(page1);
+	store();
 	myName.innerText = `Name: ${name}`;
 	myPlay.innerText = `Playbook: ${play}`;
 	playbooks(play);
@@ -46,11 +51,22 @@ var submitInformation = function(){
 
 submitButton.onclick = submitInformation; 
 
+function hide() {
+	form.style.display = 'none';
+}
 // store character name and chosen playbook to variables
 function store () {
 	name = textAnswer.value;
 	play = textPlay.value;
 	console.log(name + " " + play);
+}
+
+function toggle_visibility(id) {
+  if(id.style.display == "block") {
+    id.style.display = "none";
+	} else{
+    id.style.display = "block";
+	}
 }
 
 // assign starting stat modifiers based on playbook selection
@@ -224,3 +240,4 @@ function modStat(adj, stat) {
 	stat += adj;
 	return stat;	
 }
+
